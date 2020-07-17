@@ -22,7 +22,7 @@ www - смотрит на обоих клиентов
 ```
 
 ## Как запустить:
- - git clone git@github.com:staybox/otus_dz23.git && cd otus_dz23 && vagrant up
+ - git clone git@github.com:staybox/otus_dz19.git && cd otus_dz19 && vagrant up
 
 ## Как проверить работоспособность:
  - После отработки vagrant up можно повыполнять dns запросы на client и client2.
