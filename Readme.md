@@ -25,7 +25,7 @@ www - смотрит на обоих клиентов
  - git clone git@github.com:staybox/otus_dz23.git && cd otus_dz23 && vagrant up
 
 ## Как проверить работоспособность:
- - После отработки vagrant up повыполнять dns запросы на client и client2.
+ - После отработки vagrant up можно повыполнять dns запросы на client и client2.
 
 Для client:
 ```
@@ -38,7 +38,6 @@ Address: 192.168.50.11
 Name:	dns.lab
 Address: 192.168.50.10
 
-[vagrant@client ~]$ 
 [vagrant@client ~]$ nslookup web1.dns.lab 192.168.50.10
 Server:		192.168.50.10
 Address:	192.168.50.10#53
@@ -46,7 +45,6 @@ Address:	192.168.50.10#53
 Name:	web1.dns.lab
 Address: 192.168.50.15
 
-[vagrant@client ~]$ 
 [vagrant@client ~]$ nslookup web1.dns.lab 192.168.50.11
 Server:		192.168.50.11
 Address:	192.168.50.11#53
@@ -54,21 +52,18 @@ Address:	192.168.50.11#53
 Name:	web1.dns.lab
 Address: 192.168.50.15
 
-[vagrant@client ~]$ 
 [vagrant@client ~]$ nslookup web2.dns.lab 192.168.50.10
 Server:		192.168.50.10
 Address:	192.168.50.10#53
 
 ** server can't find web2.dns.lab: NXDOMAIN
 
-[vagrant@client ~]$ 
 [vagrant@client ~]$ nslookup web2.dns.lab 192.168.50.11
 Server:		192.168.50.11
 Address:	192.168.50.11#53
 
 ** server can't find web2.dns.lab: NXDOMAIN
-
-[vagrant@client ~]$ 
+ 
 [vagrant@client ~]$ nslookup newdns.lab 192.168.50.10
 Server:		192.168.50.10
 Address:	192.168.50.10#53
@@ -78,7 +73,6 @@ Address: 192.168.50.11
 Name:	newdns.lab
 Address: 192.168.50.10
 
-[vagrant@client ~]$ 
 [vagrant@client ~]$ nslookup newdns.lab 192.168.50.11
 Server:		192.168.50.11
 Address:	192.168.50.11#53
@@ -88,7 +82,6 @@ Address: 192.168.50.10
 Name:	newdns.lab
 Address: 192.168.50.11
 
-[vagrant@client ~]$ 
 [vagrant@client ~]$ nslookup www.newdns.lab 192.168.50.10
 Server:		192.168.50.10
 Address:	192.168.50.10#53
@@ -98,7 +91,6 @@ Address: 192.168.50.16
 Name:	www.newdns.lab
 Address: 192.168.50.15
 
-[vagrant@client ~]$ 
 [vagrant@client ~]$ nslookup www.newdns.lab 192.168.50.11
 Server:		192.168.50.11
 Address:	192.168.50.11#53
@@ -120,7 +112,6 @@ Address: 192.168.50.10
 Name:	dns.lab
 Address: 192.168.50.11
 
-[root@client2 ~]# 
 [root@client2 ~]# nslookup dns.lab 192.168.50.11
 Server:		192.168.50.11
 Address:	192.168.50.11#53
@@ -130,7 +121,6 @@ Address: 192.168.50.10
 Name:	dns.lab
 Address: 192.168.50.11
 
-[root@client2 ~]# 
 [root@client2 ~]# nslookup web1.dns.lab 192.168.50.10
 Server:		192.168.50.10
 Address:	192.168.50.10#53
@@ -138,7 +128,6 @@ Address:	192.168.50.10#53
 Name:	web1.dns.lab
 Address: 192.168.50.15
 
-[root@client2 ~]# 
 [root@client2 ~]# nslookup web1.dns.lab 192.168.50.11
 Server:		192.168.50.11
 Address:	192.168.50.11#53
@@ -146,7 +135,6 @@ Address:	192.168.50.11#53
 Name:	web1.dns.lab
 Address: 192.168.50.15
 
-[root@client2 ~]# 
 [root@client2 ~]# nslookup web2.dns.lab 192.168.50.10
 Server:		192.168.50.10
 Address:	192.168.50.10#53
@@ -154,7 +142,6 @@ Address:	192.168.50.10#53
 Name:	web2.dns.lab
 Address: 192.168.50.16
 
-[root@client2 ~]# 
 [root@client2 ~]# nslookup web2.dns.lab 192.168.50.11
 Server:		192.168.50.11
 Address:	192.168.50.11#53
@@ -162,28 +149,24 @@ Address:	192.168.50.11#53
 Name:	web2.dns.lab
 Address: 192.168.50.16
 
-[root@client2 ~]# 
 [root@client2 ~]# nslookup newdns.lab 192.168.50.10
 Server:		192.168.50.10
 Address:	192.168.50.10#53
 
 ** server can't find newdns.lab: NXDOMAIN
 
-[root@client2 ~]# 
 [root@client2 ~]# nslookup newdns.lab 192.168.50.11
 Server:		192.168.50.11
 Address:	192.168.50.11#53
 
 ** server can't find newdns.lab: NXDOMAIN
 
-[root@client2 ~]# 
 [root@client2 ~]# nslookup www.newdns.lab 192.168.50.10
 Server:		192.168.50.10
 Address:	192.168.50.10#53
 
 ** server can't find www.newdns.lab: NXDOMAIN
-
-[root@client2 ~]# 
+ 
 [root@client2 ~]# nslookup www.newdns.lab 192.168.50.11
 Server:		192.168.50.11
 Address:	192.168.50.11#53
